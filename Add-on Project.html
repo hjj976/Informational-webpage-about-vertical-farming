@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Farming 🌱</title>
+
+    <style>
+      body {
+        background: linear-gradient(
+          187deg,
+          rgb(116, 229, 229) 0%,
+          rgb(158, 127, 243) 150%
+        );
+      }
+
+      h1 {
+        text-align: center;
+        margin: 15px auto;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+        size: 10px 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid rgb(116, 229, 229);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        background: white;
+        font-size: 15px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: normal;
+      }
+
+      button:hover {
+        background: rgb(161, 238, 238);
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 10px;
+      }
+
+      a {
+        color: black;
+      }
+
+      .darkThemeButton {
+        font-size: 13px;
+        font-family: "Courier New", Courier, monospace;
+        background: black;
+        color: white;
+        padding: 10px 10px;
+      }
+
+      .darkThemeButton:hover {
+        color: black;
+        background: white;
+        font-weight: bold;
+      }
+
+      .intro-image {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .intro-image:hover {
+        filter: contrast(60%);
+        transform: scale(1.2);
+      }
+
+      .grid-image {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        margin: 15px 0;
+      }
+
+      .grid-image img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+        transition: all 250ms ease-in-out;
+      }
+
+      .grid-image img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(72, 200, 160) 11.2%,
+          rgb(32, 40, 48) 91.3%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background-color: rgb(9, 66, 50);
+      }
+      .ending {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="darkThemeButton">Change theme</button>
+    <div class="container">
+      <h1>Vertical Farming 🌱</h1>
+      <h2>A solution for Sustainable Local Development</h2>
+
+      <a
+        href="https://www.undp.org/belarus/stories/vertical-farming-solution-sustainable-local-development"
+        target="_blank"
+      >
+        <img
+          class="intro-image"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/287/original/img5_vertical.jpg?1755284146"
+          alt=""
+        />
+      </a>
+
+      <div class="grid-image">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/289/original/vertical-wall-gardening_img_4.jpg?1755284236"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/288/original/verticalgardens_img1.jpg?1755284155"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/287/original/img5_vertical.jpg?1755284146"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/286/original/img_3_vertical.jpg?1755283887"
+          alt=""
+        />
+      </div>
+
+      <p>
+        Vertical farming is an innovative agricultural practice that involves
+        growing crops in vertically stacked layers or structures. This method
+        utilizes controlled-environment agriculture (CEA) technology, which
+        optimizes plant growth by providing ideal conditions such as light,
+        temperature, and humidity. Vertical farms can be established in urban
+        areas, reducing the need for transportation and minimizing the carbon
+        footprint associated with traditional farming methods.
+      </p>
+
+      <br />
+      <strong>Benefits include:</strong>
+      <ul>
+        <li>Efficient land use</li>
+        <li>Reduced water consumption</li>
+        <li>Year-round crop production</li>
+        <li>Less pesticide use</li>
+        <li>Local food production</li>
+      </ul>
+
+      <p class="ending">
+        Give vertical farming a try at home! Start small with a few jars or a
+        single shelf of basil, mint, or lettuce under a lamp. It’s a relaxing,
+        space saving hobby that pays you back with fresh, pesticide-free greens
+        in just a few weeks.
+      </p>
+
+      <button class="getStarted">Get Started with Vertical Farming</button>
+    </div>
+    <footer>
+      Coded with 💜 by
+      <a
+        href="https://www.linkedin.com/in/kirthana-sridharkannan/"
+        target="_blank"
+        >Kirthana Sridharkannan
+      </a>
+    </footer>
+
+    <script>
+      function changeToDark() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".darkThemeButton");
+      themeButton.addEventListener("click", changeToDark);
+
+      function Subscription() {
+        let name = prompt("What is your name?");
+        let email = prompt("Please enter your email to get started:");
+        if (email) {
+          alert(
+            `Thank you for reaching out with ${email}! We will get back to you soon 🍀`
+          );
+        } else {
+          alert("Subscription cancelled.");
+        }
+      }
+
+      document
+        .querySelector(".getStarted")
+        .addEventListener("click", Subscription);
+    </script>
+  </body>
+</html>
